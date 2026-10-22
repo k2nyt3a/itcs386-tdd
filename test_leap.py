@@ -5,7 +5,11 @@ def test_2024_is_a_leap_year():
     assert is_leap(2024)
 
 def test_1900_is_not_a_leap_year():
-    assert is_leap(1900)
+    assert not is_leap(1900)
+
+def test_year_zero_is_rejected():
+    with pytest.raises(ValueError, match="1 or later"):
+        is_leap(0)
 
     
 @pytest.mark.parametrize("year, expected", [
