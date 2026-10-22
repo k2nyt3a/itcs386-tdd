@@ -1,4 +1,4 @@
-from kitchen import Quantity, grams, ounces
+from kitchen import Converter, Quantity, grams, ounces
 
 def test_multiplication():
     flour = grams(200)
